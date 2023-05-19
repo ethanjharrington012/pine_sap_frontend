@@ -117,6 +117,10 @@ export const Dashboard = () => {
       {
         text: 'Sign In',
         onClick: () => navigate('/signin')
+      },
+      {
+        text: 'About',
+        onClick: () => navigate('/about')
       }
     ]
   

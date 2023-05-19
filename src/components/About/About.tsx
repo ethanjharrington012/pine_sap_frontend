@@ -3,6 +3,7 @@ import { CarouselComponent } from '../Carousel1';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavbarComponent } from '../Navbar';
 import { PreviousShows } from '../PreviouseShows/PreviouseShows';
+import { Footer } from '../Footer/Footer';
 import { Class } from '@mui/icons-material';
 import { ClassNames } from '@emotion/react';
 import forest from '../../assets/images/forest.jpg'
@@ -19,9 +20,10 @@ const About: React.FC = () => {
       <div className="container">
         
         <CarouselComponent />
-        <h2>Previous shows</h2>
-        <div style={{ padding: '300px 0' }}>
+        <h2 style={{ textAlign: 'center', paddingTop: '50px' }}>Previous shows</h2>
+        <div style={{ padding: '100px 0' }}>
           <PreviousShows />
+
         </div>
         {/* Other content */}
         <style>{`
@@ -49,9 +51,15 @@ const About: React.FC = () => {
                 font-size: 24px;
                 line-height: 1.2;
             }
+            h2 {
+              font-family: Georgia;
+              font-size: 50px;
+              line-height: 1.2;
+            }
 
         `}</style>
       </div>
+      <Footer/>
     </div>
   );
 };

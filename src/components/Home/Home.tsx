@@ -2,11 +2,12 @@ import React from 'react';
 //...import for react above
 
 // New Styles Code
-import { styled } from '@mui/system';
+import { fontFamily, styled } from '@mui/system';
 import { Button } from '@mui/material';
 import pine_sap_image from '../../assets/images/big_pine_logo.jpg';
 // Below Imports
 import { Link } from 'react-router-dom';
+import pine_sap_log from '../../assets/images/small_pine_logo.png';
 
 interface Props{
     title: string;
@@ -70,8 +71,11 @@ export const Home = ( props:Props) => {
         <Root>
             <NavbarContainer>
                 <Logo>
-                    <LogoA href="#">Brand</LogoA>
+                <LogoA href="#">
+                    <img src={pine_sap_log} alt="Brand" style={{ width: '150px', height: 'auto' }} />
+                </LogoA>
                 </Logo>
+
                 <LogoNavigation>
                     <li>
                         <NavA to="#">Home</NavA>
@@ -86,9 +90,9 @@ export const Home = ( props:Props) => {
             </NavbarContainer>
             <Main>
                 <MainText>
-                    <h1>{props.title}</h1>
+                    <h1 style={{fontFamily: 'Gorgia'}} >{props.title}</h1>
                     <p>Not your mothers Punk Rock</p>
-                    <Button color='error' variant='contained' component={Link} to='/dashboard'>See the Artists</Button>
+                    <Button style={{ backgroundColor: 'transparent', color: 'inherit', border: 'none', fontSize: '18px' }} color='error' variant='contained' component={Link} to='/dashboard'>[ENTER]</Button>
                 </MainText>
             </Main>
 
